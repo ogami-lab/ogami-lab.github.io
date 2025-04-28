@@ -34,7 +34,6 @@
     padding-right: 5%;
     color: white;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
-    opacity: 0.8; /* ← 女の子の輪郭線も少しだけ薄く */
   }
 
   h1 {
