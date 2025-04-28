@@ -10,21 +10,41 @@
   <link rel="stylesheet" href="style.css"> <!-- CSSファイルをリンク -->
 <style>
   body {
-    background-color: #fafafa;
-    color: #333;
+    margin: 0;
     font-family: 'Helvetica', 'Arial', sans-serif;
   }
 
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 画面いっぱいに */
+    background-image: url('画像のURLまたはパス');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  }
+
   h1 {
-    font-size: 2.5em;
-    color: #2c3e50;
-    margin-bottom: 20px;
+    font-size: 3em;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1.5em;
+    margin-top: 10px;
   }
 
   a {
+    display: block;
+    margin: 30px;
+    font-size: 20px;
     color: #2980b9;
     text-decoration: none;
-    font-weight: bold;
   }
 
   a:hover {
@@ -35,23 +55,19 @@
     margin-top: 50px;
     font-size: 12px;
     color: #aaa;
+    text-align: center;
   }
 </style>
+
 </head>
 <body>
-  <!-- ヘッダーセクション -->
-  <header class="hero">
-    <div class="hero-text">
-      <h1>wakamekabuの音楽世界へようこそ</h1>
-      <p>あなたに響く音楽をお届けします。</p>
-    </div>
-  </header>
+  <div class="hero">
+    <h1>wakamekabu's Music Portfolio</h1>
+    <p>オリジナル楽曲制作・公開中</p>
+  </div>
 
-  <!-- 他のページ内容が続く -->
-  <section>
-    <h2>作品一覧</h2>
-    <!-- 作品がここに表示される -->
-  </section>
+  <a href="https://www.youtube.com/あなたのチャンネルURL" target="_blank">🎵 YouTubeで作品を聴く</a>
+  <a href="https://skima.jp/profile/あなたのSkimaプロフィールURL" target="_blank">🖋️ Skimaで作曲依頼をする</a>
 
   <footer>
     &copy; 2025 wakamekabu
