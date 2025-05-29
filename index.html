@@ -2,77 +2,35 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="wakamekabuによるオリジナル楽曲の制作・公開サイト。作曲依頼も受け付けています。">
-  <meta name="keywords" content="作曲, オリジナル曲, 音楽制作, 作曲依頼, wakamekabu">
-  <meta name="author" content="wakamekabu">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>wakamekabu | 作曲家ポートフォリオ</title>
+  <title>わかめかぶ本舗 - ogami Official Hub</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>わかめかぶ本舗</h1>
+  <p>ogami Official Hub - 音楽で世界を彩る</p>
 
-<canvas id="stars"></canvas>
-
-<div class="hero">
-  <div class="hero-left"></div>
-  <div class="hero-right">
-    <h1>My Music Portfolio</h1>
-    <p>作曲活動 / 依頼受付中</p>
-    <div class="buttons">
-      <a href="https://www.youtube.com/あなたのチャンネルURL" target="_blank">🎵 YouTubeで作品を聴く</a>
-      <a href="https://skima.jp/profile/あなたのSkimaプロフィールURL" target="_blank">🖋️ Skimaで作曲依頼をする</a>
+  <div class="link-grid">
+    <div class="card">
+      <span>🎧 作曲YouTubeチャンネル</span>
+      <a href="https://studio.youtube.com/channel/UCgTAcTw-BRtp3RFpkM4tURA" target="_blank">わかめかぶ本舗</a>
+    </div>
+    <div class="card">
+      <span>💼 SKIMA依頼受付</span>
+      <a href="https://skima.jp/profile?id=434170" target="_blank">依頼はこちら</a>
+    </div>
+    <div class="card">
+      <span>🐦 X（旧Twitter）</span>
+      <a href="https://x.com/wakamekabudayo" target="_blank">@wakamekabudayo</a>
+    </div>
+    <div class="card">
+      <span>🎵 楽曲一覧（準備中）</span>
+      <a href="#">近日公開予定</a>
+    </div>
+    <div class="card">
+      <span>📇 プロフィール（準備中）</span>
+      <a href="#">近日公開予定</a>
     </div>
   </div>
-</div>
-
-<footer>
-  &copy; 2025 wakamekabu
-</footer>
-
-<script>
-const canvas = document.getElementById('stars');
-const ctx = canvas.getContext('2d');
-
-let stars = [];
-
-function resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-
-window.addEventListener('resize', resize);
-resize();
-
-for (let i = 0; i < 150; i++) {
-  stars.push({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    radius: Math.random() * 1.5,
-    speed: Math.random() * 0.5 + 0.2
-  });
-}
-
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
-  ctx.fillStyle = "white";
-  stars.forEach(star => {
-    ctx.beginPath();
-    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-    ctx.fill();
-
-    star.y += star.speed;
-    if (star.y > canvas.height) {
-      star.y = 0;
-      star.x = Math.random() * canvas.width;
-    }
-  });
-
-  requestAnimationFrame(animate);
-}
-
-animate();
-</script>
-
 </body>
 </html>
