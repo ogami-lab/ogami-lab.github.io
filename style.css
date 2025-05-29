@@ -16,7 +16,7 @@ body, html {
   overflow-x: hidden;
 }
 
-/* === ヒーロー画像を画面いっぱいに表示 === */
+/* === ヒーロー画像を画面いっぱいに表示 ＋ 動画スライダー === */
 .hero {
   position: relative;
   width: 100vw;
@@ -25,18 +25,41 @@ body, html {
   background-size: cover;
   background-color: #000;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   gap: 2rem;
+  padding: 2rem 1rem;
 }
 
-/* === 新作動画埋め込みエリア === */
 .hero iframe {
   width: 90%;
   max-width: 560px;
   height: 315px;
   border: none;
+}
+
+.thumbnail-bar {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  overflow-x: auto;
+  padding: 0 1rem;
+}
+
+.thumbnail-bar img {
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.3s;
+  border: 2px solid transparent;
+}
+
+.thumbnail-bar img:hover,
+.thumbnail-bar img.active {
+  opacity: 1;
+  border-color: #fff;
 }
 
 /* === ナビゲーションバー === */
@@ -73,7 +96,6 @@ body, html {
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
-    padding: 2rem 1rem;
   }
 
   .navbar ul {
