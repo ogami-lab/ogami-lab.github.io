@@ -1,14 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const thumbnails = document.querySelectorAll(".thumbnail-bar img");
-  const mainVideo = document.getElementById("main-video");
+// javascript.js
 
-  thumbnails.forEach((thumb) => {
-    thumb.addEventListener("click", () => {
-      const videoId = thumb.getAttribute("data-video");
-      mainVideo.src = `https://www.youtube.com/embed/${videoId}`;
+function changeVideo(playerId, videoId) {
+  const iframe = document.getElementById(playerId);
+  iframe.src = `https://www.youtube.com/embed/${videoId}`;
+}
 
-      thumbnails.forEach(t => t.classList.remove("active"));
-      thumb.classList.add("active");
-    });
-  });
-});
+// 必要に応じて今後追加機能を拡張できます。
+// 例：自動スライド、トランジション効果、再生制御など
