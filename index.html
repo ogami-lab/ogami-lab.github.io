@@ -12,7 +12,46 @@
     <img src="top_back3.png" alt="ヒーロー画像" class="hero-image" />
   </header>
 
-  <!-- 活動リンク集セクション -->
+  <!-- 動画セクション：4カラム構成 -->
+  <section class="videos">
+    <!-- 1列目：空白 -->
+    <div></div>
+
+    <!-- 2列目：ogami lab タイトル、テーマ、カルーセル -->
+    <div class="column">
+      <h1>ogami lab</h1>
+      <p class="subtitle">雨のしずくのような、水底のような。</p>
+      <div class="carousel" id="instruments-carousel">
+        <iframe id="instruments-video" width="100%" height="315" src="https://www.youtube.com/embed/FD_vv9REat0" frameborder="0" allowfullscreen></iframe>
+        <div class="thumbnails">
+          <img src="https://img.youtube.com/vi/FD_vv9REat0/hqdefault.jpg" onclick="changeVideo('instruments-video', 'FD_vv9REat0')">
+          <img src="https://img.youtube.com/vi/AkzVyzFpiqM/hqdefault.jpg" onclick="changeVideo('instruments-video', 'AkzVyzFpiqM')">
+          <img src="https://img.youtube.com/vi/36s7mmPkKas/hqdefault.jpg" onclick="changeVideo('instruments-video', '36s7mmPkKas')">
+        </div>
+      </div>
+    </div>
+
+    <!-- 3列目：尾神のうた 縦カルーセル -->
+    <div class="column">
+      <h2>尾神のうた</h2>
+      <div class="carousel-vertical">
+        <iframe id="vocal-video" width="100%" height="315" src="https://www.youtube.com/embed/36s7mmPkKas" frameborder="0" allowfullscreen></iframe>
+        <div class="thumbnails-vertical">
+          <img src="https://img.youtube.com/vi/36s7mmPkKas/hqdefault.jpg" onclick="changeVideo('vocal-video', '36s7mmPkKas')">
+          <img src="https://img.youtube.com/vi/AkzVyzFpiqM/hqdefault.jpg" onclick="changeVideo('vocal-video', 'AkzVyzFpiqM')">
+          <img src="https://img.youtube.com/vi/FD_vv9REat0/hqdefault.jpg" onclick="changeVideo('vocal-video', 'FD_vv9REat0')">
+        </div>
+      </div>
+    </div>
+
+    <!-- 4列目：X（旧Twitter）タイムライン埋め込み -->
+    <div class="column">
+      <a class="twitter-timeline" href="https://x.com/ogamiwaka">Tweets by ogamiwaka</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </section>
+
+  <!-- 活動リンク集 -->
   <section class="links">
     <h2>活動リンク集</h2>
     <ul>
@@ -23,32 +62,6 @@
     </ul>
   </section>
 
-  <!-- Video Section -->
-  <section class="videos">
-    <div class="video-box">
-      <h2>Instruments</h2>
-      <div class="video-player">
-        <iframe id="main-video" width="560" height="315" src="https://www.youtube.com/embed/FD_vv9REat0" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="video-thumbnails">
-        <img src="https://img.youtube.com/vi/FD_vv9REat0/hqdefault.jpg" onclick="changeVideo('FD_vv9REat0')" />
-        <img src="https://img.youtube.com/vi/AkzVyzFpiqM/hqdefault.jpg" onclick="changeVideo('AkzVyzFpiqM')" />
-        <img src="https://img.youtube.com/vi/36s7mmPkKas/hqdefault.jpg" onclick="changeVideo('36s7mmPkKas')" />
-      </div>
-    </div>
-    <div class="video-box">
-      <h2>尾神のうた</h2>
-      <div class="video-player">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/36s7mmPkKas" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    function changeVideo(videoId) {
-      const iframe = document.getElementById('main-video');
-      iframe.src = `https://www.youtube.com/embed/${videoId}`;
-    }
-  </script>
+  <script src="javascript.js"></script>
 </body>
 </html>
