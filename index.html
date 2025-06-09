@@ -1,56 +1,54 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ogami lab</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ogami Lab</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- ナビゲーション -->
-  <div class="navbar">
+  <!-- Hero Section -->
+  <header class="hero">
+    <img src="top_back3.png" alt="ヒーロー画像" class="hero-image" />
+  </header>
+
+  <!-- 活動リンク集セクション -->
+  <section class="links">
+    <h2>活動リンク集</h2>
     <ul>
-      <li><a href="#about">about</a></li>
-      <li><a href="#works">works</a></li>
-      <li><a href="#contact">contact</a></li>
+      <li><a href="https://www.youtube.com/@Ogami-lab" target="_blank">🎧 作曲チャンネル（Ogami-lab）</a></li>
+      <li><a href="https://www.youtube.com/@wakamekabudayo" target="_blank">🎤 歌チャンネル（尾神わか）</a></li>
+      <li><a href="https://x.com/wakamekabudayo" target="_blank">🕊️ X（旧Twitter）</a></li>
+      <li><a href="https://wakamekabu.github.io/" target="_blank">🌐 ポートフォリオサイト</a></li>
     </ul>
-  </div>
-
-
-  <!-- Heroセクション -->
-<section class="hero">
-  　<h2>ogami lab へようこそ</h2>
-    <p>感情も傷も水底のような音にして。</p>
-  <iframe id="main-video" src="https://www.youtube.com/embed/FD_vv9REat0" allowfullscreen></iframe>
-  <div class="thumbnail-bar">
-    <img src="https://img.youtube.com/vi/FD_vv9REat0/0.jpg" data-video="FD_vv9REat0" class="active">
-    <img src="https://img.youtube.com/vi/AkzVyzFpiqM/0.jpg" data-video="AkzVyzFpiqM">
-    <img src="https://img.youtube.com/vi/36s7mmPkKas/0.jpg" data-video="36s7mmPkKas">
-  </div>
-    <!-- 動画セクション -->
-  <section id="videos">
-    <h2>尾神のうた</h2>
-    <div class="video-grid">
-      <iframe src="https://www.youtube.com/embed/nwZHAeLP0i0" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
-</section>
-
-
-
-  <!-- 依頼セクション -->
-  <section id="contact">
-    <h2>ご依頼について</h2>
-    <p>音楽制作のご依頼は <a href="https://skima.jp/profile?id=434170" target="_blank">SKIMA</a> より受け付けております。</p>
   </section>
 
-  <!-- フッター -->
-  <footer>
-    <p>&copy; ogami lab</p>
-    <div class="links">
-      <a href="https://x.com/wakamekabudayo" target="_blank">X</a>
-      <a href="https://www.youtube.com/@ogami-wakame" target="_blank">YouTube</a>
+  <!-- Video Section -->
+  <section class="videos">
+    <div class="video-box">
+      <h2>Instruments</h2>
+      <div class="video-player">
+        <iframe id="main-video" width="560" height="315" src="https://www.youtube.com/embed/FD_vv9REat0" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-thumbnails">
+        <img src="https://img.youtube.com/vi/FD_vv9REat0/hqdefault.jpg" onclick="changeVideo('FD_vv9REat0')" />
+        <img src="https://img.youtube.com/vi/AkzVyzFpiqM/hqdefault.jpg" onclick="changeVideo('AkzVyzFpiqM')" />
+        <img src="https://img.youtube.com/vi/36s7mmPkKas/hqdefault.jpg" onclick="changeVideo('36s7mmPkKas')" />
+      </div>
     </div>
-  </footer>
+    <div class="video-box">
+      <h2>尾神のうた</h2>
+      <div class="video-player">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/36s7mmPkKas" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function changeVideo(videoId) {
+      const iframe = document.getElementById('main-video');
+      iframe.src = `https://www.youtube.com/embed/${videoId}`;
+    }
+  </script>
 </body>
 </html>
