@@ -121,11 +121,23 @@ h1 {
   color: #ccc;
 }
 
-.twitter-timeline {
-  width: 100% !important;
-  height: 400px !important;
-  overflow-y: auto;
-  background-color: #000;
+.twitter-fake {
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #ddd;
+  font-size: 0.95rem;
+}
+
+.tweet-placeholder a {
+  color: #1da1f2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.tweet-placeholder a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 1024px) {
