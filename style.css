@@ -24,16 +24,15 @@ body {
 }
 
 .videos {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1.2fr 1.2fr;
   position: absolute;
   top: 0;
   width: 100%;
   padding: 2rem;
   z-index: 2;
 }
+
 
 .video-box {
   max-width: 560px;
