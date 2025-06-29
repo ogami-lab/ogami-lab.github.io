@@ -7,13 +7,64 @@
 html, body {
   height: 100%;
   width: 100%;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
 }
 
 .hero {
   width: 100vw;
   height: 100vh;
-  background-image: url('images/top_back3.png'); /* ファイル名を正確に！ */
+  background-image: url('images/top_back3.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.hero-content {
+  width: 40%;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  z-index: 1;
+}
+
+/* 📱 スマホ時：画像 → テキスト縦並びに変更 */
+@media (max-width: 768px) {
+  .hero {
+    display: block;
+    height: auto;
+    padding: 0;
+  }
+
+  .hero::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-image: url('images/top_back3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding: 1.5rem;
+    background: #000; /* 完全黒背景 */
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
 }
