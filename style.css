@@ -12,7 +12,7 @@ html, body {
 .hero {
   width: 100vw;
   height: 100vh;
-  background-image: url('top_back3.png'); /* ファイル名を正確に！ */
+  background-image: url('images/top_back3.png'); /* ファイル名を正確に！ */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
