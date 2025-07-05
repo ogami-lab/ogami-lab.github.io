@@ -57,9 +57,11 @@ html, body {
 
 .block iframe {
   aspect-ratio: 16 / 9;
-  width: 100%;
+  width: 50%;        /* ← サイズを小さく（60〜90%まで調整可能） */
   height: auto;
   border: none;
+  margin: 0 auto;
+  display: block;    /* 中央揃えのため */
 }
 
 .block p {
