@@ -137,4 +137,13 @@ html, body {
   .block iframe {
     height: 180px;
   }
+  
+  .block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-col, .button-col {
+    max-width: 100%;
+  }
 }
