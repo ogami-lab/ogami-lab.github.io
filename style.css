@@ -60,7 +60,7 @@ html, body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .video-col {
@@ -74,6 +74,13 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.desc-col {
+  flex: 1;
+  max-width: 25%;
+  color: white;
+  font-size: 0.9rem;
 }
 
 .block iframe {
@@ -117,6 +124,14 @@ html, body {
 }
 .black-bar.bottom {
   bottom: 0;
+}
+
+.footer-credit {
+  text-align: center;
+  color: white;
+  font-size: 0.75rem;
+  line-height: 60px;
+  pointer-events: none;
 }
 
 /* レスポンシブ対応 */
