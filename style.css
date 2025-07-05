@@ -19,14 +19,14 @@ html, body {
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center; /* ←flex-end → center に修正 */
   align-items: center;
   padding: 2rem;
   position: relative;
 }
 
 .hero-content {
-  width: 40%;
+  width: 45%; /* or 50% にして幅をもたせる */
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 1.5rem;
@@ -38,21 +38,27 @@ html, body {
 
 .button {
   display: inline-block;
-  background-color: #ffffff20;
-  color: white;
-  padding: 0.5rem 1rem;
+  background: linear-gradient(to right, #444, #222);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
   text-decoration: none;
-  border: 1px solid white;
-  border-radius: 4px;
-  margin-top: 0.5rem;
-  transition: background-color 0.3s;
+  border: 1px solid #999;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
+
 .button:hover {
-  background-color: #ffffff40;
+  background: linear-gradient(to right, #666, #333);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
 
 .block iframe {
+  aspect-ratio: 16 / 9;
   width: 100%;
+  height: auto;
   border: none;
 }
 
