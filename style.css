@@ -11,7 +11,7 @@ html, body {
   background-color: #000;
 }
 
-/* ヒーロー画像左／右黒オーバーレイ */
+/* Hero section */
 .hero {
   width: 100vw;
   height: 100vh;
@@ -37,7 +37,7 @@ html, body {
 
 .hero-content {
   position: relative;
-  width: 45%;
+  width: 65%;
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 1.5rem;
@@ -48,6 +48,81 @@ html, body {
   z-index: 1;
 }
 
+.site-title {
+  position: fixed;
+  top: 10px;
+  left: 30px;
+  transform: none;
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+  z-index: 10000;
+  pointer-events: none;
+  text-shadow: 0 0 10px #000;
+}
+
+/* Content blocks */
+.block {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1.2rem 5% 1.2rem auto;
+  width: 90%;
+  max-width: 1200px;
+  min-height: 230px;
+}
+
+
+.video-col {
+  flex: 0 0 30%;
+  max-width: 30%;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.button-col {
+  flex: 0 0 15%;
+  max-width: 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0 1rem;
+}
+
+.desc-col {
+  flex: 0 0 50%;
+  max-width: 70%;
+  color: white;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.block p {
+  margin-bottom: 0.3rem;
+}
+
+.block iframe {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 0;
+  display: block;
+  object-fit: cover;
+}
+
+
+/* Make images used in video column behave like iframes */
+.video-col img {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  object-fit: cover;
+}
+
+/* Buttons */
 .button {
   display: inline-block;
   background: linear-gradient(to right, #444, #222);
@@ -68,63 +143,7 @@ html, body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
 
-.block {
-  display: flex;
-  justify-content: flex-end;
-  margin: 1.2rem 5% 1.2rem auto;
-  width: 80%;
-  max-width: 1200px;
-}
-
-.video-col {
-  flex: 0 0 30%;
-  max-width: 30%;
-}
-
-.button-col {
-  flex: 0 0 15%;
-  max-width: 15%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  margin: 0 1rem;
-}
-
-.desc-col {
-  flex: 0 0 50%;
-  max-width: 70%;
-  color: white;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-.block iframe {
-  aspect-ratio: 16 / 9;
-  width: 50%;
-  height: auto;
-  border: none;
-  margin: 0 auto;
-  display: block;
-}
-
-.block p {
-  margin-bottom: 0.3rem;
-}
-
-.site-title {
-  position: fixed;
-  top: 10px;
-  left: 30px;
-  transform: none;
-  font-size: 1.8rem;
-  color: white;
-  font-weight: bold;
-  z-index: 10000;
-  pointer-events: none;
-  text-shadow: 0 0 10px #000;
-}
-
-/* 映画風の上下黒帯 */
+/* Cinematic black bars */
 .black-bar {
   position: fixed;
   left: 0;
@@ -145,7 +164,7 @@ html, body {
   pointer-events: none;
 }
 
-/* レスポンシブ対応 */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .hero::after {
     width: 100%;
@@ -162,15 +181,19 @@ html, body {
     padding: 1rem;
     text-align: center;
   }
-  .block iframe {
+  .block iframe,
+  .video-col img {
     height: 180px;
   }
   .block {
+    width: 100%;
+    min-height: auto;
     justify-content: flex-end;
     flex-direction: column;
     align-items: center;
   }
-  .video-col, .button-col {
+  .video-col,
+  .button-col {
     max-width: 100%;
   }
 }
