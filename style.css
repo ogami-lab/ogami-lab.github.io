@@ -92,7 +92,7 @@ html, body {
 
 .desc-col {
   flex: 0 0 50%;
-  max-width: 50%;
+  max-width: 70%;
   color: white;
   font-size: 0.9rem;
   line-height: 1.5;
