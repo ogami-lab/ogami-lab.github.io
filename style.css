@@ -23,6 +23,7 @@ html, body {
   position: relative;
 }
 
+/*
 .hero::after {
   content: "";
   position: absolute;
@@ -34,6 +35,7 @@ html, body {
   z-index: 0;
   pointer-events: none;
 }
+*/
 
 .hero-content {
   position: relative;
