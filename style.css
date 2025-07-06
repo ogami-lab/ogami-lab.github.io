@@ -65,21 +65,21 @@ html, body {
 }
 
 .video-col {
-  flex: 1;
-  max-width: 60%;
+  flex: 0 0 30%;
+  max-width: 30%;
 }
 
 .button-col {
-  flex: 1;
-  max-width: 40%;
+  flex: 0 0 15%;
+  max-width: 15%;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .desc-col {
-  flex: 1;
-  max-width: 40%;
+  flex: 0 0 50%;
+  max-width: 50%;
   color: white;
   font-size: 0.9rem;
   line-height: 1.5;
@@ -156,6 +156,7 @@ html, body {
   }
   
   .block {
+    justify-content: flex-end;
     flex-direction: column;
     align-items: center;
   }
