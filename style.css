@@ -39,11 +39,12 @@ html, body {
 .button {
   display: inline-block;
   background: linear-gradient(to right, #444, #222);
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
   color: #fff;
-  padding: 0.6rem 1.2rem;
   text-decoration: none;
   border: 1px solid #999;
-  border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.5);
   font-weight: bold;
   transition: all 0.3s ease;
@@ -78,9 +79,10 @@ html, body {
 
 .desc-col {
   flex: 1;
-  max-width: 25%;
+  max-width: 40%;
   color: white;
   font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .block iframe {
@@ -98,13 +100,13 @@ html, body {
 
 .site-title {
   position: fixed;
-  top: 30px; /* 上の黒帯高さ60pxの中央 */
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2.5rem;
+  top: 10px;
+  left: 30px; /* ← 左寄せに */
+  transform: none;
+  font-size: 1.8rem; /* 小さめに調整 */
   color: white;
   font-weight: bold;
-  z-index: 10000; /* 黒帯より前面 */
+  z-index: 10000;
   pointer-events: none;
   text-shadow: 0 0 10px #000;
 }
